@@ -1,0 +1,41 @@
+name: Cypress Grep Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to run'
+        required: true
+        default: '@web'
+
+jobs:
+  cypress-grep-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14' # Specify the Node.js version you need
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Cypress tests with grep
+        run: npm run web # This will be replaced dynamically
+        env:
+          TAG: ${{ github.event.inputs.tag }}
+      - name: Run Cypress tests
+        run: |
+          if [ "${{ github.event.inputs.tag }}" == "@web" ]; then
+            npm run web
+          elif [ "${{ github.event.inputs.tag }}" == "@social" ]; then
+            npm run social
+          elif [ "${{ github.event.inputs.tag }}" == "@ecom" ]; then
+            npm run ecom
+          else
+            npm run all
+          fi

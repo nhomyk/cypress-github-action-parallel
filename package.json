@@ -5,5 +5,25 @@
   "dependencies": {
     "@cypress/grep": "^4.0.1",
     "cypress-plugin-store": "^1.3.4"
-  }
+  },
+  "name": "cypress-github-action-parallel",
+  "description": "",
+  "version": "1.0.0",
+  "main": "cypress.config.js",
+  "scripts": {
+    "all": "npx cypress run",
+    "web": "npx cypress run --env grepTags=@web",
+    "social": "npx cypress run --env grepTags=@social",
+    "ecom": "npx cypress run --env grepTags=@ecom"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lasithdilshan20/cypress-github-action-parallel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lasithdilshan20/cypress-github-action-parallel/issues"
+  },
+  "homepage": "https://github.com/lasithdilshan20/cypress-github-action-parallel#readme"
 }
