@@ -114,6 +114,9 @@ jobs:
             npm run all
           fi
 ```
+https://github.com/lasithdilshan20/cypress-github-action-parallel/actions/workflows/cypress-grep.yml
+![image](https://github.com/lasithdilshan20/cypress-github-action-parallel/assets/16818367/ea459c9c-33bf-452d-bb54-0638f92bc646)
+
 
 ### Parallel Execution Across Browsers
 
@@ -151,6 +154,7 @@ jobs:
         env:
           # Set the necessary environment variables here if needed
 ```
+![image](https://github.com/lasithdilshan20/cypress-github-action-parallel/assets/16818367/ccf5fe3f-1fac-412d-8687-c41e3b47ef8f)
 
 ## Author
 
