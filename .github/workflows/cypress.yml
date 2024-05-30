@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        spec-file: [spec-1.cy.js, spec-2.cy.js, spec-3.cy.js]
+        spec-file: [homepage.cy.js]
 
     steps:
       - name: Checkout code
